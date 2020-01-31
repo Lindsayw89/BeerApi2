@@ -1,12 +1,8 @@
 
-<!-- <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter"> -->
+<input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
 
 
 <table  mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
-
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-  
     
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
