@@ -19,8 +19,6 @@ export class BeerComponent implements OnInit {
 
   async ngOnInit() {
     const data = await this.beerService.getAll();
-
-
   
      this.dataSource= new MatTableDataSource(data);
      this.dataSource.sort= this.sort;
