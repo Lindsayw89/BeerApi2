@@ -11,18 +11,20 @@ import {BeerService} from '../beer.service';
   styleUrls: ['./beer.component.css']
 })
 export class BeerComponent implements OnInit {
-  displayedColumns: string[] = ['name', 'tagline', 'desccription', 'abv'];
+  displayedColumns: string[] = ['name', 'tagline', 'description', 'abv'];
   dataSource: MatTableDataSource<Ibeer>; //
   @ViewChild(MatSort , {static: true}) sort : MatSort; //
 
   constructor(private beerService : BeerService ) { }
 
   async ngOnInit() {
-    let data = await this.beerService.getAll();
+    const data = await this.beerService.getAll();
 
-    data = this.beerService.BEER_DATA;
-    // this.dataSource= new MatTableDataSource(this.beerService.BEER_DATA);
-    // this.dataSource.sort= this.sort; //
+
+  
+     this.dataSource= new MatTableDataSource(data);
+     this.dataSource.sort= this.sort;
+ 
 
   }
 

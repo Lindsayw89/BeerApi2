@@ -8,10 +8,9 @@ import {Ibeer} from './interfaces/ibeer';
   providedIn: 'root'
 })
 export class BeerService {
-BEER_DATA: Ibeer[]=[
-  {name: 'Bob', tagline: 'nice and wheaty', description: 'will get you drunk o a budget', abv: 6},
+
     
-]
+
   constructor(private apiService : ApiService) { }
 
   async getAll(){

@@ -5,11 +5,11 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiService {
-url="https://api.punkapi.com/v2/beers"
+url="https://api.punkapi.com/v2/"
 
   constructor(private httpClient : HttpClient) { }
 async get(path) {
-  return await this.httpClient.get(this.url + path).toPromise();
+  return await this.httpClient.get<any>(this.url + path).toPromise();
 }
 
 // async post(path, data, options){
