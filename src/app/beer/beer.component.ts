@@ -28,4 +28,8 @@ export class BeerComponent implements OnInit {
 
   }
 
+  applyFilter(filter) {
+    this.dataSource.filter = filter.trim().toLowerCase();
+  }
+
 }
