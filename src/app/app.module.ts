@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BeerComponent } from './beer/beer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import{MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material'
